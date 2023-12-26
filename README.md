@@ -1,35 +1,66 @@
-Advantages of Foundry?
+## Foundry
 
-1. Fast
-2. Built-in Fuzzing
-3. Solidity-based testing
-4. "EVM Cheat codes"
-5. Scripts based in bash / shell
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-What do we want to do with frameworks?
+Foundry consists of:
 
--   Build
--   Test
--   Deploy
--   Interact
+-   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+-   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+-   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+-   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-# Resources
+## Documentation
 
--   [Foundry Book](https://onbjerg.github.io/foundry-book/)
--   [Foundry Starter Kit](https://github.com/smartcontractkit/foundry-starter-kit)
+https://book.getfoundry.sh/
 
-# Quickstart
+## Usage
 
-## Requirements
+### Build
 
--   [Forge/Foundryup](https://github.com/gakonst/foundry#installation)
-    -   You'll know you've done it right if you can run `forge --version`
--   [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-    -   You'll know you've done it right if you can run `git --version`
-
+```shell
+$ forge build
 ```
-git clone https://github.com/PatrickAlphaC/foundry-play
-cd foundry-play
-foundryup
-make
+
+### Test
+
+```shell
+$ forge test
+```
+
+### Format
+
+```shell
+$ forge fmt
+```
+
+### Gas Snapshots
+
+```shell
+$ forge snapshot
+```
+
+### Anvil
+
+```shell
+$ anvil
+```
+
+### Deploy
+
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
 ```
